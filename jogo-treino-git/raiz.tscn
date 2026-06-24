@@ -9,5 +9,6 @@
 texture = ExtResource("1_t8lke")
 
 [node name="Ganso__Enemy" type="Sprite2D" parent="."]
+modulate = Color(1, 0.5, 0.5, 1)
 position = Vector2(641, 307)
 texture = ExtResource("2_k12mm")
