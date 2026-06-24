@@ -6,6 +6,7 @@
 [node name="Raiz" type="Node2D"]
 
 [node name="Pato" type="Sprite2D" parent="."]
+position = Vector2(1794, 223)
 texture = ExtResource("1_t8lke")
 
 [node name="Ganso__Enemy" type="Sprite2D" parent="."]
