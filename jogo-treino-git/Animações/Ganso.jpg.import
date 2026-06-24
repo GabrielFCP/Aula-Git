@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7d1wl5n8ip81"
-path="res://.godot/imported/Ganso.jpg-42e2028784b392424f301b2457beb863.ctex"
+path="res://.godot/imported/Ganso.jpg-a9fa3355aa499e754f9d66996ffef91a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ganso.jpg"
-dest_files=["res://.godot/imported/Ganso.jpg-42e2028784b392424f301b2457beb863.ctex"]
+source_file="res://Animações/Ganso.jpg"
+dest_files=["res://.godot/imported/Ganso.jpg-a9fa3355aa499e754f9d66996ffef91a.ctex"]
 
 [params]
 
