@@ -10,7 +10,7 @@ public partial class PatoScripts : Node
 	[Export]
 	RigidBody2D PatoTemRb;
 	[Export]
-	Sprite2D SpritePato;
+	Sprite2D SpritePatoAlterado;
 	[Export]
 	float vida = 100.0f;
 	[Export]
@@ -57,8 +57,8 @@ public partial class PatoScripts : Node
 		Tween tween = CreateTween();
 		tween.SetLoops(4);
 
-		tween.TweenProperty(SpritePato, "modulate:a", 0.2f, 0.1f);
-		tween.TweenProperty(SpritePato, "modulate:a", 1f, 0.1f);
+		tween.TweenProperty(SpritePatoAlterado, "modulate:a", 0.2f, 0.1f);
+		tween.TweenProperty(SpritePatoAlterado, "modulate:a", 1f, 0.1f);
 	}
 	private void PrintFunction()
 	{
