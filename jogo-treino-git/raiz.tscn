@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d2uj8y1arbqg6" path="res://Imagens/Mallard ~ ~ ~ #pixelart #duck #ducks #aseprite #digitalart #digitalartwork #pixelartwork #pixelartist #pixels #pixel #art #ドット絵.jpg" id="1_t8lke"]
 [ext_resource type="Script" uid="uid://i1npeamedrb1" path="res://Scripts/PatoScripts.cs" id="2_g76pc"]
 [ext_resource type="Texture2D" uid="uid://7d1wl5n8ip81" path="res://Imagens/Ganso.jpg" id="2_k12mm"]
+[ext_resource type="Script" uid="uid://bwabwlnx4cl5e" path="res://GansoScript.cs" id="4_tl684"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g76pc"]
 radius = 67.0
@@ -12,7 +13,7 @@ height = 214.0
 
 [node name="Ganso__Enemy" type="Sprite2D" parent="."]
 modulate = Color(0.7798535, 0, 0.17812288, 1)
-position = Vector2(2211, 384)
+position = Vector2(1836, 812)
 texture = ExtResource("2_k12mm")
 
 [node name="GansoScript" type="Node" parent="Ganso__Enemy"]
