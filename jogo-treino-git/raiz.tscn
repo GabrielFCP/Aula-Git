@@ -18,7 +18,7 @@ script = ExtResource("2_g76pc")
 
 [node name="Ganso__Enemy" type="Sprite2D" parent="."]
 modulate = Color(0.7798535, 0, 0.17812288, 1)
-position = Vector2(340, 316)
+position = Vector2(1836, 812)
 texture = ExtResource("2_k12mm")
 
 [node name="GansoScript" type="Node" parent="Ganso__Enemy"]
