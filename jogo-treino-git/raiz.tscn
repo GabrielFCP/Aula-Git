@@ -1,19 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjjxify04vxlv"]
 
 [ext_resource type="Texture2D" uid="uid://d2uj8y1arbqg6" path="res://Imagens/Mallard ~ ~ ~ #pixelart #duck #ducks #aseprite #digitalart #digitalartwork #pixelartwork #pixelartist #pixels #pixel #art #ドット絵.jpg" id="1_t8lke"]
-[ext_resource type="Script" uid="uid://i1npeamedrb1" path="res://scripts/PatoScripts.cs" id="2_g76pc"]
+[ext_resource type="Script" uid="uid://i1npeamedrb1" path="res://Scripts/PatoScripts.cs" id="2_g76pc"]
 [ext_resource type="Texture2D" uid="uid://7d1wl5n8ip81" path="res://Imagens/Ganso.jpg" id="2_k12mm"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g76pc"]
+radius = 67.0
+height = 214.0
+
 [node name="Raiz" type="Node2D"]
-
-[node name="Pato" type="Sprite2D" parent="."]
-position = Vector2(1794, 223)
-texture = ExtResource("1_t8lke")
-
-[node name="PatoScripts" type="Node2D" parent="Pato"]
-script = ExtResource("2_g76pc")
-
-[node name="Camera2D" type="Camera2D" parent="Pato"]
 
 [node name="Ganso__Enemy" type="Sprite2D" parent="."]
 modulate = Color(0.7798535, 0, 0.17812288, 1)
@@ -21,3 +16,18 @@ position = Vector2(2211, 384)
 texture = ExtResource("2_k12mm")
 
 [node name="GansoScript" type="Node" parent="Ganso__Enemy"]
+
+[node name="Pato" type="RigidBody2D" parent="."]
+position = Vector2(1794, 223)
+
+[node name="Pato" type="Sprite2D" parent="Pato"]
+texture = ExtResource("1_t8lke")
+
+[node name="PatoScript" type="Node" parent="Pato"]
+script = ExtResource("2_g76pc")
+
+[node name="Camera" type="Camera2D" parent="Pato"]
+position = Vector2(1794, 223)
+
+[node name="Hitbox" type="CollisionShape2D" parent="Pato"]
+shape = SubResource("CapsuleShape2D_g76pc")
