@@ -3,11 +3,21 @@ using System;
 
 public partial class PatoScripts : Node2D
 {
+	/// <summary>
+	/// fazendo umas variaveis aleatórias
+	/// </summary>
+	/// 
 	[Export]
-	RigidBody2D Rb;
+	RigidBody2D PatoRb;
 	[Export]
 	Sprite2D SpritePato;
+	[Export]
+	private float vida = 100.0f;
+	[Export]
+	public float dano = 50.0f;
+	public bool PatoIsAlive = true;
 	double FlickTime;
+
 	Vector2 input;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -47,6 +57,11 @@ public partial class PatoScripts : Node2D
 
 		tween.TweenProperty(SpritePato, "modulate:a", 0.2f, 0.1f);
 		tween.TweenProperty(SpritePato, "modulate:a", 1f, 0.1f);
+	}
+	private void PrintFunction()
+	{
+		GD.Print("Teste conflito");
+		
 	}
 
 }

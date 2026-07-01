@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://d2uj8y1arbqg6" path="res://Imagens/Mallard ~ ~ ~ #pixelart #duck #ducks #aseprite #digitalart #digitalartwork #pixelartwork #pixelartist #pixels #pixel #art #ドット絵.jpg" id="1_t8lke"]
 [ext_resource type="Script" uid="uid://i1npeamedrb1" path="res://Scripts/PatoScripts.cs" id="2_g76pc"]
 [ext_resource type="Texture2D" uid="uid://7d1wl5n8ip81" path="res://Imagens/Ganso.jpg" id="2_k12mm"]
-[ext_resource type="Script" uid="uid://bwabwlnx4cl5e" path="res://GansoScript.cs" id="4_tl684"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g76pc"]
 radius = 67.0
@@ -24,8 +23,10 @@ position = Vector2(1794, 223)
 [node name="Pato" type="Sprite2D" parent="Pato"]
 texture = ExtResource("1_t8lke")
 
-[node name="PatoScript" type="Node" parent="Pato"]
+[node name="PatoScript" type="Node" parent="Pato" node_paths=PackedStringArray("PatoRb", "SpritePato")]
 script = ExtResource("2_g76pc")
+PatoRb = NodePath("..")
+SpritePato = NodePath("../Pato")
 
 [node name="Camera" type="Camera2D" parent="Pato"]
 position = Vector2(1794, 223)
