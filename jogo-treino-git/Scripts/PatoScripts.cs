@@ -8,14 +8,16 @@ public partial class PatoScripts : Node
 	/// </summary>
 	/// 
 	[Export]
-	RigidBody2D PatoRbAlterado;
+	RigidBody2D PatoTemRb;
 	[Export]
 	Sprite2D SpritePatoAlterado;
 	[Export]
-	private float vida = 50.0f;
+	float vida = 100.0f;
 	[Export]
-	public float dano = 1000000.0f;
-	public bool PatoIsAlive = true;
+	float dano = 50.0f;
+	[Export]
+	float walkspeed = 50;
+	public bool PatoIsAlive {get; private set;} = true;
 	double FlickTime;
 
 	Vector2 input;
@@ -31,17 +33,17 @@ public partial class PatoScripts : Node
 
 		GetInput();
 
-		if(FlickTime >= 2)
+		if(FlickTime >= 1)
 		{
-			TweeeeeeeeenFlick();
+			HitFlick();
 			FlickTime = 0;
-			GD.Print("Flick!");
 		}
 	}
 
     public override void _PhysicsProcess(double delta)
-    {
-    }
+	{
+		PatoTemRb.ApplyCentralForce(input * walkspeed);
+	}
 
 
 	private void GetInput()
@@ -50,7 +52,7 @@ public partial class PatoScripts : Node
 		Vector2 input = new Vector2 (Tempinput.X * 2, 0).Normalized();
 	}
 
-	private void TweeeeeeeeenFlick()
+	private void HitFlick()
 	{
 		Tween tween = CreateTween();
 		tween.SetLoops(4);

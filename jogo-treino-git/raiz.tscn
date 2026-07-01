@@ -31,14 +31,20 @@ shape = SubResource("CapsuleShape2D_apd2t")
 
 [node name="Pato" type="RigidBody2D" parent="."]
 position = Vector2(167, -189)
+gravity_scale = 0.0
+lock_rotation = true
 
 [node name="Pato" type="Sprite2D" parent="Pato"]
 texture = ExtResource("1_t8lke")
 
-[node name="PatoScript" type="Node" parent="Pato"]
+[node name="PatoScript" type="Node" parent="Pato" node_paths=PackedStringArray("PatoTemRb", "SpritePatoAlterado")]
 script = ExtResource("2_g76pc")
+PatoTemRb = NodePath("..")
+SpritePatoAlterado = NodePath("../Pato")
+walkspeed = 9999999.0
 
 [node name="Camera" type="Camera2D" parent="Pato"]
+zoom = Vector2(0.25, 0.25)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Pato"]
 shape = SubResource("CapsuleShape2D_g76pc")
