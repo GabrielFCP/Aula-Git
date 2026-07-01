@@ -21,13 +21,14 @@ script = ExtResource("4_tl684")
 
 [node name="Pato" type="RigidBody2D" parent="."]
 position = Vector2(1793, 961)
+gravity_scale = 0.0
 
 [node name="Pato" type="Sprite2D" parent="Pato"]
 texture = ExtResource("1_t8lke")
 
-[node name="PatoScript" type="Node" parent="Pato" node_paths=PackedStringArray("PatoRb", "SpritePato")]
+[node name="PatoScript" type="Node" parent="Pato" node_paths=PackedStringArray("PatoTemRb", "SpritePato")]
 script = ExtResource("2_g76pc")
-PatoRb = NodePath("..")
+PatoTemRb = NodePath("..")
 SpritePato = NodePath("../Pato")
 
 [node name="Camera" type="Camera2D" parent="Pato"]

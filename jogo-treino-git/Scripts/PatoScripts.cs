@@ -16,7 +16,7 @@ public partial class PatoScripts : Node
 	[Export]
 	float dano = 50.0f;
 	[Export]
-	float walkspeed = 50;
+	float walkspeed = 9999;
 	public bool PatoIsAlive {get; private set;} = true;
 	double FlickTime;
 
