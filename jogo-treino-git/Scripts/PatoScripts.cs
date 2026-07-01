@@ -8,13 +8,13 @@ public partial class PatoScripts : Node
 	/// </summary>
 	/// 
 	[Export]
-	RigidBody2D PatoRb;
+	RigidBody2D PatoRbAlterado;
 	[Export]
-	Sprite2D SpritePato;
+	Sprite2D SpritePatoAlterado;
 	[Export]
-	private float vida = 100.0f;
+	private float vida = 50.0f;
 	[Export]
-	public float dano = 50.0f;
+	public float dano = 1000000.0f;
 	public bool PatoIsAlive = true;
 	double FlickTime;
 
@@ -55,8 +55,8 @@ public partial class PatoScripts : Node
 		Tween tween = CreateTween();
 		tween.SetLoops(4);
 
-		tween.TweenProperty(SpritePato, "modulate:a", 0.2f, 0.1f);
-		tween.TweenProperty(SpritePato, "modulate:a", 1f, 0.1f);
+		tween.TweenProperty(SpritePatoAlterado, "modulate:a", 0.2f, 0.1f);
+		tween.TweenProperty(SpritePatoAlterado, "modulate:a", 1f, 0.1f);
 	}
 	private void PrintFunction()
 	{
