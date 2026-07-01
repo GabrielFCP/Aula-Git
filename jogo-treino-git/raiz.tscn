@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjjxify04vxlv"]
+[gd_scene load_steps=4 format=3 uid="uid://cjjxify04vxlv"]
 
 [ext_resource type="Texture2D" uid="uid://d2uj8y1arbqg6" path="res://Imagens/Mallard ~ ~ ~ #pixelart #duck #ducks #aseprite #digitalart #digitalartwork #pixelartwork #pixelartist #pixels #pixel #art #ドット絵.jpg" id="1_t8lke"]
 [ext_resource type="Script" uid="uid://i1npeamedrb1" path="res://scripts/PatoScripts.cs" id="2_g76pc"]
 [ext_resource type="Texture2D" uid="uid://7d1wl5n8ip81" path="res://Imagens/Ganso.jpg" id="2_k12mm"]
-[ext_resource type="Script" uid="uid://c5usevox212i6" path="res://scripts/ganso_script.gd" id="4_tl684"]
 
 [node name="Raiz" type="Node2D"]
 
@@ -22,4 +21,3 @@ position = Vector2(2211, 384)
 texture = ExtResource("2_k12mm")
 
 [node name="GansoScript" type="Node" parent="Ganso__Enemy"]
-script = ExtResource("4_tl684")
