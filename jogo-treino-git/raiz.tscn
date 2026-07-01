@@ -29,7 +29,6 @@ PatoRb = NodePath("..")
 SpritePato = NodePath("../Pato")
 
 [node name="Camera" type="Camera2D" parent="Pato"]
-position = Vector2(1794, 223)
 
 [node name="Hitbox" type="CollisionShape2D" parent="Pato"]
 shape = SubResource("CapsuleShape2D_g76pc")

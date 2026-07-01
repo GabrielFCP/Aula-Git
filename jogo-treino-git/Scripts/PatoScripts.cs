@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class PatoScripts : Node2D
+public partial class PatoScripts : Node
 {
 	/// <summary>
 	/// fazendo umas variaveis aleatórias
